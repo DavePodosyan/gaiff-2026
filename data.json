@@ -94,9 +94,9 @@
       "secs": [
         "opening"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "USA",
+      "runtime": 52,
+      "year": 2022,
       "url": "https://gaiff.am/once"
     },
     {
@@ -131,9 +131,9 @@
       "secs": [
         "intl"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "Belgium / France / Vietnam",
+      "runtime": 71,
+      "year": 2025,
       "url": "https://gaiff.am/hair"
     },
     {
@@ -143,9 +143,9 @@
       "secs": [
         "intl"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "Austria",
+      "runtime": 120,
+      "year": 2026,
       "url": "https://gaiff.am/london"
     },
     {
@@ -155,9 +155,9 @@
       "secs": [
         "intl"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "Germany / France / Norway / Denmark / Afghanistan",
+      "runtime": 103,
+      "year": 2026,
       "url": "https://gaiff.am/nogoodmen"
     },
     {
@@ -167,9 +167,9 @@
       "secs": [
         "intl"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "Armenia / Netherlands",
+      "runtime": 94,
+      "year": 2025,
       "url": "https://gaiff.am/outlivingshakespeare"
     },
     {
@@ -179,9 +179,9 @@
       "secs": [
         "intl"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "Iran / Norway / Italy",
+      "runtime": 80,
+      "year": 2025,
       "url": "https://gaiff.am/pastfuture"
     },
     {
@@ -191,9 +191,9 @@
       "secs": [
         "intl"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "Switzerland / Argentina",
+      "runtime": 104,
+      "year": 2025,
       "url": "https://gaiff.am/thecurrents"
     },
     {
@@ -203,9 +203,9 @@
       "secs": [
         "intl"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "Cyprus / Luxembourg / Greece",
+      "runtime": 106,
+      "year": 2026,
       "url": "https://gaiff.am/lion"
     },
     {
@@ -215,9 +215,9 @@
       "secs": [
         "intl"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "Canada",
+      "runtime": 97,
+      "year": 2026,
       "url": "https://gaiff.am/themechanicsofborders"
     },
     {
@@ -227,9 +227,9 @@
       "secs": [
         "intl"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "Georgia / Germany / Luxembourg / Bulgaria / Czech Republic / Turkey",
+      "runtime": 100,
+      "year": 2025,
       "url": "https://gaiff.am/themoonisafatherofmine"
     },
     {
@@ -239,9 +239,9 @@
       "secs": [
         "intl"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "Switzerland",
+      "runtime": 90,
+      "year": 2026,
       "url": "https://gaiff.am/tristanforever"
     },
     {
@@ -251,9 +251,9 @@
       "secs": [
         "regional"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "Canada",
+      "runtime": 94,
+      "year": 2026,
       "url": "https://gaiff.am/fire"
     },
     {
@@ -263,9 +263,9 @@
       "secs": [
         "regional"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "Canada / Iran / Turkey / Venezuela",
+      "runtime": 77,
+      "year": 2026,
       "url": "https://gaiff.am/anincompletecalendar"
     },
     {
@@ -275,9 +275,9 @@
       "secs": [
         "regional"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "Spain / Lebanon",
+      "runtime": 70,
+      "year": 2026,
       "url": "https://gaiff.am/dreamof"
     },
     {
@@ -288,9 +288,9 @@
         "regional",
         "germany"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "Germany / Georgia",
+      "runtime": 186,
+      "year": 2025,
       "url": "https://gaiff.am/dryleaf"
     },
     {
@@ -300,9 +300,9 @@
       "secs": [
         "regional"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "Palestine / Germany / Saudi Arabia / Sweden",
+      "runtime": 96,
+      "year": 2025,
       "url": "https://gaiff.am/habibi"
     },
     {
@@ -312,9 +312,9 @@
       "secs": [
         "regional"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "Belgium / Armenia",
+      "runtime": 67,
+      "year": 2026,
       "url": "https://gaiff.am/hereelswhere"
     },
     {
@@ -324,9 +324,9 @@
       "secs": [
         "regional"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "Iran",
+      "runtime": 103,
+      "year": 2025,
       "url": "https://gaiff.am/insideamir"
     },
     {
@@ -336,9 +336,9 @@
       "secs": [
         "regional"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "Egypt / Libya / Qatar / Tunisia / Germany",
+      "runtime": 114,
+      "year": 2026,
       "url": "https://gaiff.am/saveexit"
     },
     {
@@ -348,9 +348,9 @@
       "secs": [
         "regional"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "Canada / Iran",
+      "runtime": 87,
+      "year": 2025,
       "url": "https://gaiff.am/west"
     },
     {
@@ -360,9 +360,9 @@
       "secs": [
         "regional"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "Germany / Palestine / France / Qatar",
+      "runtime": 106,
+      "year": 2025,
       "url": "https://gaiff.am/withhasaningaza"
     },
     {
@@ -372,9 +372,9 @@
       "secs": [
         "stone"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "Armenia",
+      "runtime": 35,
+      "year": 2026,
       "url": "https://gaiff.am/paidmourners"
     },
     {
@@ -384,9 +384,9 @@
       "secs": [
         "stone"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "Armenia",
+      "runtime": 11,
+      "year": 2025,
       "url": "https://gaiff.am/togetheralone"
     },
     {
@@ -396,9 +396,9 @@
       "secs": [
         "stone"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "Armenia",
+      "runtime": 28,
+      "year": 2026,
       "url": "https://gaiff.am/aquietblue"
     },
     {
@@ -408,9 +408,9 @@
       "secs": [
         "stone"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "Armenia",
+      "runtime": 23,
+      "year": 2025,
       "url": "https://gaiff.am/relic"
     },
     {
@@ -420,9 +420,9 @@
       "secs": [
         "stone"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "Armenia / Germany",
+      "runtime": 11,
+      "year": 2025,
       "url": "https://gaiff.am/theeternalred"
     },
     {
@@ -432,9 +432,9 @@
       "secs": [
         "stone"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "Armenia",
+      "runtime": 16,
+      "year": 2026,
       "url": "https://gaiff.am/kafka"
     },
     {
@@ -444,9 +444,9 @@
       "secs": [
         "stone"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "Russia / Armenia",
+      "runtime": 12,
+      "year": 2025,
       "url": "https://gaiff.am/lola"
     },
     {
@@ -456,9 +456,9 @@
       "secs": [
         "stone"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "France / Armenia",
+      "runtime": 25,
+      "year": 2026,
       "url": "https://gaiff.am/dialogues"
     },
     {
@@ -468,9 +468,9 @@
       "secs": [
         "stone"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "Armenia",
+      "runtime": 20,
+      "year": 2026,
       "url": "https://gaiff.am/herostrat"
     },
     {
@@ -481,9 +481,9 @@
         "stone",
         "france"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "France / Belgium / Armenia",
+      "runtime": 25,
+      "year": 2026,
       "url": "https://gaiff.am/forthose"
     },
     {
@@ -493,9 +493,9 @@
       "secs": [
         "yp"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "Spain",
+      "runtime": 111,
+      "year": 2026,
       "url": "https://gaiff.am/bitter"
     },
     {
@@ -505,9 +505,9 @@
       "secs": [
         "yp"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "USA",
+      "runtime": 119,
+      "year": 2025,
       "url": "https://gaiff.am/diemylove"
     },
     {
@@ -517,9 +517,9 @@
       "secs": [
         "yp"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "Mexico / USA",
+      "runtime": 98,
+      "year": 2025,
       "url": "https://gaiff.am/dreams"
     },
     {
@@ -529,9 +529,9 @@
       "secs": [
         "yp"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "Romania / Norway / Denmark / Finland / France / Sweden",
+      "runtime": 146,
+      "year": 2026,
       "url": "https://gaiff.am/fjord"
     },
     {
@@ -543,9 +543,9 @@
         "retro",
         "germany"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "Poland / Germany / Italy / France",
+      "runtime": 82,
+      "year": 2026,
       "url": "https://gaiff.am/fatherland"
     },
     {
@@ -555,9 +555,9 @@
       "secs": [
         "yp"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "Belgium / Germany / Sweden / Netherlands",
+      "runtime": 94,
+      "year": 2026,
       "url": "https://gaiff.am/marinka"
     },
     {
@@ -568,9 +568,9 @@
         "yp",
         "germany"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "Germany / France / Bulgaria / Austria",
+      "runtime": 167,
+      "year": 2026,
       "url": "https://gaiff.am/adventure"
     },
     {
@@ -580,9 +580,9 @@
       "secs": [
         "yp"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "France / Italy",
+      "runtime": 139,
+      "year": 2026,
       "url": "https://gaiff.am/theunknown"
     },
     {
@@ -592,9 +592,9 @@
       "secs": [
         "yp"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "USA",
+      "runtime": 138,
+      "year": 2025,
       "url": "https://gaiff.am/sinners"
     },
     {
@@ -604,9 +604,9 @@
       "secs": [
         "yp"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "UK",
+      "runtime": 60,
+      "year": 2026,
       "url": "https://gaiff.am/docfilm"
     },
     {
@@ -616,9 +616,9 @@
       "secs": [
         "yp"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "Armenia",
+      "runtime": 81,
+      "year": 2026,
       "url": "https://gaiff.am/danceoflife"
     },
     {
@@ -629,9 +629,9 @@
         "yp",
         "france"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "France / Belgium / USA",
+      "runtime": 159,
+      "year": 2026,
       "url": "https://gaiff.am/degaulle"
     },
     {
@@ -641,9 +641,9 @@
       "secs": [
         "yp"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "France / Armenia",
+      "runtime": 56,
+      "year": 2025,
       "url": "https://gaiff.am/garden"
     },
     {
@@ -653,9 +653,9 @@
       "secs": [
         "yp"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "Russia",
+      "runtime": 92,
+      "year": 2026,
       "url": "https://gaiff.am/ddtxx"
     },
     {
@@ -665,9 +665,9 @@
       "secs": [
         "yp"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "Russia",
+      "runtime": 73,
+      "year": 2025,
       "url": "https://gaiff.am/razlogov"
     },
     {
@@ -677,9 +677,9 @@
       "secs": [
         "yp"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "USA",
+      "runtime": 98,
+      "year": 2008,
       "url": "https://gaiff.am/mybigfat"
     },
     {
@@ -689,9 +689,9 @@
       "secs": [
         "yp"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "Armenia",
+      "runtime": 90,
+      "year": 2006,
       "url": "https://gaiff.am/bigstory"
     },
     {
@@ -701,9 +701,9 @@
       "secs": [
         "yp"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "USSR (Latvia)",
+      "runtime": 10,
+      "year": 1978,
       "url": "https://gaiff.am/tenminuites"
     },
     {
@@ -713,9 +713,9 @@
       "secs": [
         "twisted"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "USA",
+      "runtime": 74,
+      "year": 1982,
       "url": "https://gaiff.am/cafeflesh"
     },
     {
@@ -725,9 +725,9 @@
       "secs": [
         "twisted"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "USA",
+      "runtime": 108,
+      "year": 2025,
       "url": "https://gaiff.am/obsession"
     },
     {
@@ -737,9 +737,9 @@
       "secs": [
         "twisted"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "Germany / Italy / Spain / UK / USA",
+      "runtime": 111,
+      "year": 2026,
       "url": "https://gaiff.am/rosebush"
     },
     {
@@ -749,9 +749,9 @@
       "secs": [
         "twisted"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "Australia",
+      "runtime": 113,
+      "year": 2026,
       "url": "https://gaiff.am/saccharine"
     },
     {
@@ -761,9 +761,9 @@
       "secs": [
         "twisted"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "USA",
+      "runtime": 120,
+      "year": 2026,
       "url": "https://gaiff.am/campmiasma"
     },
     {
@@ -773,9 +773,9 @@
       "secs": [
         "doc"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "UK / France",
+      "runtime": 73,
+      "year": 2026,
       "url": "https://gaiff.am/thecase"
     },
     {
@@ -785,9 +785,9 @@
       "secs": [
         "doc"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "Czech Republic",
+      "runtime": 75,
+      "year": 2025,
       "url": "https://gaiff.am/minimumlove"
     },
     {
@@ -798,9 +798,9 @@
         "doc",
         "germany"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "Germany / Netherlands",
+      "runtime": 85,
+      "year": 2026,
       "url": "https://gaiff.am/twomountains"
     },
     {
@@ -810,9 +810,9 @@
       "secs": [
         "doc"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "France",
+      "runtime": 15,
+      "year": 2025,
       "url": "https://gaiff.am/eva"
     },
     {
@@ -822,9 +822,9 @@
       "secs": [
         "doc"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "Serbia / Kosovo",
+      "runtime": 18,
+      "year": 2025,
       "url": "https://gaiff.am/mitrovica"
     },
     {
@@ -835,9 +835,9 @@
         "doc",
         "germany"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "Germany",
+      "runtime": 16,
+      "year": 2025,
       "url": "https://gaiff.am/coldcall"
     },
     {
@@ -847,9 +847,9 @@
       "secs": [
         "doc"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "USA",
+      "runtime": 20,
+      "year": 2025,
       "url": "https://gaiff.am/errabonda"
     },
     {
@@ -859,9 +859,9 @@
       "secs": [
         "germany"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "Germany / Iran",
+      "runtime": 94,
+      "year": 2025,
       "url": "https://gaiff.am/highwaydeer"
     },
     {
@@ -871,9 +871,9 @@
       "secs": [
         "oosc"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "USA / Portugal",
+      "runtime": 6,
+      "year": 2026,
       "url": "https://gaiff.am/domestic"
     },
     {
@@ -883,9 +883,9 @@
       "secs": [
         "oosc"
       ],
-      "country": null,
-      "runtime": null,
-      "year": null,
+      "country": "USA / Malaysia",
+      "runtime": 11,
+      "year": 2026,
       "url": "https://gaiff.am/sandivara"
     },
     {
