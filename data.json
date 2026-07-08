@@ -1,0 +1,1016 @@
+{
+  "festival": {
+    "start": "2026-07-12",
+    "end": "2026-07-19"
+  },
+  "sections": [
+    {
+      "id": "opening",
+      "name": "Opening / Closing",
+      "color": "#e94e1b"
+    },
+    {
+      "id": "intl",
+      "name": "International Competition",
+      "color": "#2e6fd6"
+    },
+    {
+      "id": "regional",
+      "name": "Regional Competition",
+      "color": "#ef8443"
+    },
+    {
+      "id": "stone",
+      "name": "Apricot Stone",
+      "color": "#151412"
+    },
+    {
+      "id": "yp",
+      "name": "Yerevan Premieres",
+      "color": "#e94e1b",
+      "group": "Non-Competition"
+    },
+    {
+      "id": "twisted",
+      "name": "Twisted Apricot",
+      "color": "#d6699a",
+      "group": "Non-Competition"
+    },
+    {
+      "id": "doc",
+      "name": "Doc Alliance",
+      "color": "#2e6fd6",
+      "group": "Non-Competition"
+    },
+    {
+      "id": "germany",
+      "name": "Made in Germany",
+      "color": "#151412",
+      "group": "Non-Competition"
+    },
+    {
+      "id": "france",
+      "name": "Made in France",
+      "color": "#2e6fd6",
+      "group": "Non-Competition"
+    },
+    {
+      "id": "oosc",
+      "name": "Out of Competition Shorts",
+      "color": "#ef8443",
+      "group": "Non-Competition"
+    },
+    {
+      "id": "retro",
+      "name": "Retrospectives",
+      "color": "#e94e1b",
+      "sub": "Paweł Pawlikowski · Jessica Hausner"
+    },
+    {
+      "id": "tribute",
+      "name": "Tributes",
+      "color": "#151412",
+      "sub": "Bahram Beyzai · Béla Tarr · Bruno Delbonnel"
+    }
+  ],
+  "films": [
+    {
+      "id": "arto",
+      "title": "In the Land of Arto",
+      "dir": "Tamara Stepanyan",
+      "secs": [
+        "opening",
+        "france"
+      ],
+      "country": "France / Armenia",
+      "runtime": 104,
+      "year": 2025,
+      "url": "https://gaiff.am/thelandofarto"
+    },
+    {
+      "id": "once",
+      "title": "Once within a Time",
+      "dir": "Godfrey Reggio",
+      "secs": [
+        "opening"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/once"
+    },
+    {
+      "id": "babystar",
+      "title": "Babystar",
+      "dir": "Joscha Bongard",
+      "secs": [
+        "intl",
+        "germany"
+      ],
+      "country": "Germany",
+      "runtime": 98,
+      "year": 2025,
+      "url": "https://gaiff.am/babystar"
+    },
+    {
+      "id": "father",
+      "title": "Father",
+      "dir": "Tereza Nvotová",
+      "secs": [
+        "intl"
+      ],
+      "country": "Slovakia / Czech Republic / Poland",
+      "runtime": 103,
+      "year": 2025,
+      "url": "https://gaiff.am/father"
+    },
+    {
+      "id": "hair",
+      "title": "Hair, Paper, Water…",
+      "dir": "Nicolas Graux, Minh Quy Truong",
+      "secs": [
+        "intl"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/hair"
+    },
+    {
+      "id": "london",
+      "title": "London",
+      "dir": "Sebastian Brameshuber",
+      "secs": [
+        "intl"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/london"
+    },
+    {
+      "id": "nogoodmen",
+      "title": "No Good Men",
+      "dir": "Shahrbanoo Sadat",
+      "secs": [
+        "intl"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/nogoodmen"
+    },
+    {
+      "id": "shakespeare",
+      "title": "Outliving Shakespeare",
+      "dir": "Inna Sahakyan, Ruben Ghazaryan",
+      "secs": [
+        "intl"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/outlivingshakespeare"
+    },
+    {
+      "id": "pastfuture",
+      "title": "Past Future Continuous",
+      "dir": "Morteza Ahmadvand, Firouzeh Khosrovani",
+      "secs": [
+        "intl"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/pastfuture"
+    },
+    {
+      "id": "currents",
+      "title": "The Currents",
+      "dir": "Milagros Mumenthaler",
+      "secs": [
+        "intl"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/thecurrents"
+    },
+    {
+      "id": "lion",
+      "title": "The Lion at My Back",
+      "dir": "Tonia Mishiali",
+      "secs": [
+        "intl"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/lion"
+    },
+    {
+      "id": "borders",
+      "title": "The Mechanics of Borders",
+      "dir": "Hubert Caron-Guay",
+      "secs": [
+        "intl"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/themechanicsofborders"
+    },
+    {
+      "id": "moon",
+      "title": "The Moon is a Father of Mine",
+      "dir": "George Ovashvili",
+      "secs": [
+        "intl"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/themoonisafatherofmine"
+    },
+    {
+      "id": "tristan",
+      "title": "Tristan Forever",
+      "dir": "Tobias Nölle, Loran Bonnardot",
+      "secs": [
+        "intl"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/tristanforever"
+    },
+    {
+      "id": "fire",
+      "title": "A Fire There",
+      "dir": "Marlene Edoyan",
+      "secs": [
+        "regional"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/fire"
+    },
+    {
+      "id": "calendar",
+      "title": "An Incomplete Calendar",
+      "dir": "Sanaz Sohrabi",
+      "secs": [
+        "regional"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/anincompletecalendar"
+    },
+    {
+      "id": "dream",
+      "title": "Dream of Another Summer",
+      "dir": "Irene Bartolomé",
+      "secs": [
+        "regional"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/dreamof"
+    },
+    {
+      "id": "dryleaf",
+      "title": "Dry Leaf",
+      "dir": "Alexandre Koberidze",
+      "secs": [
+        "regional",
+        "germany"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/dryleaf"
+    },
+    {
+      "id": "habibi",
+      "title": "Habibi Hussein",
+      "dir": "Alex Bakri",
+      "secs": [
+        "regional"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/habibi"
+    },
+    {
+      "id": "elsewhere",
+      "title": "Here, Elsewhere",
+      "dir": "Comes Chahbazian",
+      "secs": [
+        "regional"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/hereelswhere"
+    },
+    {
+      "id": "amir",
+      "title": "Inside Amir",
+      "dir": "Amir Azizi",
+      "secs": [
+        "regional"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/insideamir"
+    },
+    {
+      "id": "safeexit",
+      "title": "Safe Exit",
+      "dir": "Mohammed Hammad",
+      "secs": [
+        "regional"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/saveexit"
+    },
+    {
+      "id": "west",
+      "title": "The Westoxicateds",
+      "dir": "Gilda Pourjabar",
+      "secs": [
+        "regional"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/west"
+    },
+    {
+      "id": "hasan",
+      "title": "With Hasan in Gaza",
+      "dir": "Kamal Aljafari",
+      "secs": [
+        "regional"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/withhasaningaza"
+    },
+    {
+      "id": "mourners",
+      "title": "Paid Mourners",
+      "dir": "Ovsanna Gevorgyan",
+      "secs": [
+        "stone"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/paidmourners"
+    },
+    {
+      "id": "together",
+      "title": "Together Alone",
+      "dir": "Artur Sahakyan",
+      "secs": [
+        "stone"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/togetheralone"
+    },
+    {
+      "id": "quietblue",
+      "title": "A Quiet Blue",
+      "dir": "Ovsanna Shekoyan",
+      "secs": [
+        "stone"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/aquietblue"
+    },
+    {
+      "id": "relic",
+      "title": "Relic",
+      "dir": "Sona Khachatryan",
+      "secs": [
+        "stone"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/relic"
+    },
+    {
+      "id": "eternalred",
+      "title": "The Eternal Red",
+      "dir": "Naira Sargsyan",
+      "secs": [
+        "stone"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/theeternalred"
+    },
+    {
+      "id": "kafka",
+      "title": "Kafka",
+      "dir": "Vahan Khachatryan",
+      "secs": [
+        "stone"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/kafka"
+    },
+    {
+      "id": "lola",
+      "title": "Lola",
+      "dir": "Tamara Ayrapetyan",
+      "secs": [
+        "stone"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/lola"
+    },
+    {
+      "id": "dialogues",
+      "title": "Dialogues Solitaires",
+      "dir": "Serouj Hovsepian",
+      "secs": [
+        "stone"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/dialogues"
+    },
+    {
+      "id": "herostrat",
+      "title": "Herostrat",
+      "dir": "Arthur Nazaretian",
+      "secs": [
+        "stone"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/herostrat"
+    },
+    {
+      "id": "forthose",
+      "title": "For Those",
+      "dir": "Emile Parseghian",
+      "secs": [
+        "stone",
+        "france"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/forthose"
+    },
+    {
+      "id": "bitter",
+      "title": "Bitter Christmas",
+      "dir": "Pedro Almodóvar",
+      "secs": [
+        "yp"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/bitter"
+    },
+    {
+      "id": "diemylove",
+      "title": "Die My Love",
+      "dir": "Lynne Ramsay",
+      "secs": [
+        "yp"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/diemylove"
+    },
+    {
+      "id": "dreams",
+      "title": "Dreams",
+      "dir": "Michel Franco",
+      "secs": [
+        "yp"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/dreams"
+    },
+    {
+      "id": "fjord",
+      "title": "Fjord",
+      "dir": "Cristian Mungiu",
+      "secs": [
+        "yp"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/fjord"
+    },
+    {
+      "id": "fatherland",
+      "title": "Fatherland",
+      "dir": "Paweł Pawlikowski",
+      "secs": [
+        "yp",
+        "retro",
+        "germany"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/fatherland"
+    },
+    {
+      "id": "mariinka",
+      "title": "Mariinka",
+      "dir": "Pieter-Jan De Pue",
+      "secs": [
+        "yp"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/marinka"
+    },
+    {
+      "id": "adventure",
+      "title": "The Dreamed Adventure",
+      "dir": "Valeska Grisebach",
+      "secs": [
+        "yp",
+        "germany"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/adventure"
+    },
+    {
+      "id": "theunknown",
+      "title": "The Unknown",
+      "dir": "Arthur Harari",
+      "secs": [
+        "yp"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/theunknown"
+    },
+    {
+      "id": "sinners",
+      "title": "Sinners",
+      "dir": "Ryan Coogler",
+      "secs": [
+        "yp"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/sinners"
+    },
+    {
+      "id": "docfilm",
+      "title": "The Story of Documentary Film",
+      "dir": "Mark Cousins",
+      "secs": [
+        "yp"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/docfilm"
+    },
+    {
+      "id": "danceoflife",
+      "title": "Dance of Life",
+      "dir": "Arsen Aghajanyan",
+      "secs": [
+        "yp"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/danceoflife"
+    },
+    {
+      "id": "degaulle",
+      "title": "De Gaulle: Resistance",
+      "dir": "Antonin Baudry",
+      "secs": [
+        "yp",
+        "france"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/degaulle"
+    },
+    {
+      "id": "garden",
+      "title": "The Garden That Dreamt of You",
+      "dir": "Jasmine Razarian",
+      "secs": [
+        "yp"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/garden"
+    },
+    {
+      "id": "ddtxx",
+      "title": "DDTXXCENTURY",
+      "dir": "Sergey Kuznetsov",
+      "secs": [
+        "yp"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/ddtxx"
+    },
+    {
+      "id": "razlogov",
+      "title": "Razlogov",
+      "dir": "Anastasia Razlogova",
+      "secs": [
+        "yp"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/razlogov"
+    },
+    {
+      "id": "mybigfat",
+      "title": "My Big Fat Armenian Family",
+      "dir": "Sevak Ohanian",
+      "secs": [
+        "yp"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/mybigfat"
+    },
+    {
+      "id": "bigstory",
+      "title": "Big Story in a Small City",
+      "dir": "Gor Kirakosian",
+      "secs": [
+        "yp"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/bigstory"
+    },
+    {
+      "id": "tenminutes",
+      "title": "Ten Minutes Older",
+      "dir": "Herz Frank",
+      "secs": [
+        "yp"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/tenminuites"
+    },
+    {
+      "id": "cafeflesh",
+      "title": "Café Flesh",
+      "dir": "Stephen Sayadian",
+      "secs": [
+        "twisted"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/cafeflesh"
+    },
+    {
+      "id": "obsession",
+      "title": "Obsession",
+      "dir": "Curry Barker",
+      "secs": [
+        "twisted"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/obsession"
+    },
+    {
+      "id": "rosebush",
+      "title": "Rosebush Pruning",
+      "dir": "Karim Aïnouz",
+      "secs": [
+        "twisted"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/rosebush"
+    },
+    {
+      "id": "saccharine",
+      "title": "Saccharine",
+      "dir": "Natalie Erika James",
+      "secs": [
+        "twisted"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/saccharine"
+    },
+    {
+      "id": "campmiasma",
+      "title": "Teenage Sex and Death at Camp Miasma",
+      "dir": "Jane Schoenbrun",
+      "secs": [
+        "twisted"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/campmiasma"
+    },
+    {
+      "id": "thecase",
+      "title": "The Case Against Space",
+      "dir": "Graeme Arnfield",
+      "secs": [
+        "doc"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/thecase"
+    },
+    {
+      "id": "minimumlove",
+      "title": "Minimum Love",
+      "dir": "Maja Penčič",
+      "secs": [
+        "doc"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/minimumlove"
+    },
+    {
+      "id": "twomountains",
+      "title": "Two Mountains Weighting Down My Chest",
+      "dir": "Viv Li",
+      "secs": [
+        "doc",
+        "germany"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/twomountains"
+    },
+    {
+      "id": "eva",
+      "title": "Some of You Fucked Eva",
+      "dir": "Lilith Grasmug",
+      "secs": [
+        "doc"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/eva"
+    },
+    {
+      "id": "mitrovica",
+      "title": "The Divided City of Mitrovica",
+      "dir": "Marko Grba Singh",
+      "secs": [
+        "doc"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/mitrovica"
+    },
+    {
+      "id": "coldcall",
+      "title": "Cold Call",
+      "dir": "Stefanie Schroeder",
+      "secs": [
+        "doc",
+        "germany"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/coldcall"
+    },
+    {
+      "id": "errabonda",
+      "title": "Errabonda",
+      "dir": "Emma Harris",
+      "secs": [
+        "doc"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/errabonda"
+    },
+    {
+      "id": "highwaydeer",
+      "title": "Highway Deer",
+      "dir": "Abolfazl Saffari",
+      "secs": [
+        "germany"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/highwaydeer"
+    },
+    {
+      "id": "domestic",
+      "title": "Domestic Demon",
+      "dir": "Anahid Yahjian",
+      "secs": [
+        "oosc"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/domestic"
+    },
+    {
+      "id": "sandiwara",
+      "title": "Sandiwara",
+      "dir": "Sean Baker",
+      "secs": [
+        "oosc"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/sandivara"
+    },
+    {
+      "id": "swallow",
+      "title": "The Swallow’s Toast of Faith",
+      "dir": "Hovhannes Ishkhanyan, Suren Belyan",
+      "secs": [
+        "oosc"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/swallow"
+    },
+    {
+      "id": "theday",
+      "title": "Isn’t the Day the Day",
+      "dir": "Grigor Khachatryan",
+      "secs": [
+        "oosc"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/theday"
+    },
+    {
+      "id": "coldwar",
+      "title": "Cold War",
+      "dir": "Paweł Pawlikowski",
+      "secs": [
+        "retro"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/coldwar"
+    },
+    {
+      "id": "ida",
+      "title": "Ida",
+      "dir": "Paweł Pawlikowski",
+      "secs": [
+        "retro"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/ida"
+    },
+    {
+      "id": "clubzero",
+      "title": "Club Zero",
+      "dir": "Jessica Hausner",
+      "secs": [
+        "retro"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/clubzero"
+    },
+    {
+      "id": "hotel",
+      "title": "Hotel",
+      "dir": "Jessica Hausner",
+      "secs": [
+        "retro",
+        "germany"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/hotel"
+    },
+    {
+      "id": "lovelyrita",
+      "title": "Lovely Rita",
+      "dir": "Jessica Hausner",
+      "secs": [
+        "retro",
+        "germany"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/lovelyrita"
+    },
+    {
+      "id": "bashu",
+      "title": "Bashu, the Little Stranger",
+      "dir": "Bahram Beyzai",
+      "secs": [
+        "tribute"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/bashu"
+    },
+    {
+      "id": "satantango",
+      "title": "Sátántangó",
+      "dir": "Béla Tarr",
+      "secs": [
+        "tribute"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/satantango"
+    },
+    {
+      "id": "amelie",
+      "title": "Amélie",
+      "dir": "Jean-Pierre Jeunet",
+      "secs": [
+        "tribute",
+        "france"
+      ],
+      "country": null,
+      "runtime": null,
+      "year": null,
+      "url": "https://gaiff.am/amelie"
+    }
+  ],
+  "screenings": []
+}

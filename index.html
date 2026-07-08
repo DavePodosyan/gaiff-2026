@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GAIFF 2026 · Golden Apricot Yerevan Film Festival</title>
+<meta name="description" content="Unofficial program & schedule browser for the 23rd Golden Apricot Yerevan International Film Festival, July 12–19, 2026">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='42' fill='%23e94e1b'/></svg>">
+<style>
+  :root {
+    --paper: #f6f0e2;
+    --paper2: #fffdf4;
+    --ink: #151412;
+    --blue: #2e6fd6;
+    --blue-deep: #1d4fa8;
+    --red: #e94e1b;
+    --orange: #ef8443;
+    --cream: #f3e3c8;
+    --pink: #f2a3c0;
+    --muted: #6f675a;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--paper);
+    background-image:
+      linear-gradient(rgba(21,20,18,.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(21,20,18,.045) 1px, transparent 1px);
+    background-size: 56px 56px;
+    color: var(--ink);
+    font-family: 'Inter', system-ui, sans-serif;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+  .stripes-top {
+    height: 12px;
+    background: repeating-linear-gradient(90deg,
+      var(--orange) 0 46px, var(--cream) 46px 68px,
+      var(--red) 68px 114px, var(--cream) 114px 136px);
+    border-bottom: 2px solid var(--ink);
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px 80px; position: relative; z-index: 1; }
+
+  /* vertical edge text, like the poster */
+  .edge {
+    position: fixed; right: 14px; top: 50%; transform: translateY(-50%);
+    writing-mode: vertical-rl; text-orientation: mixed;
+    font-family: 'Anton', sans-serif; font-size: 13px; letter-spacing: .18em;
+    color: var(--ink); opacity: .75; z-index: 0; user-select: none;
+    border-left: 1px solid var(--ink); padding-left: 8px;
+  }
+  @media (max-width: 1260px) { .edge { display: none; } }
+
+  /* ===== Hero ===== */
+  header { padding: 34px 0 0; }
+  .hero {
+    border: 2px solid var(--ink); background: var(--paper2);
+    display: grid; grid-template-columns: 300px 1fr; position: relative;
+    box-shadow: 6px 6px 0 var(--ink);
+  }
+  .sky {
+    background: var(--blue); border-right: 2px solid var(--ink);
+    position: relative; overflow: hidden; min-height: 230px;
+  }
+  .sky svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .hero-main { padding: 26px 30px 22px; position: relative; }
+  .sun {
+    position: absolute; top: 18px; right: 26px; width: 74px; height: 74px;
+    background: var(--red); border-radius: 50%;
+  }
+  .sun::after { content:''; position:absolute; top: 40%; left: -18px; right: -14px; height: 1.5px; background: rgba(21,20,18,.65); }
+  .kicker { font-family: 'Anton', sans-serif; font-size: 13px; letter-spacing: .2em; text-transform: uppercase; color: var(--red); }
+  h1 {
+    font-family: 'Anton', sans-serif; font-weight: 400;
+    font-size: clamp(40px, 6.5vw, 72px); line-height: .96; text-transform: uppercase;
+    margin: 10px 0 4px; letter-spacing: .01em; padding-right: 90px;
+  }
+  h1 .y { color: var(--blue); }
+  .poem { display: inline-block; font-family: 'Anton', sans-serif; font-size: 14px; letter-spacing: .14em; text-transform: uppercase;
+    background: var(--pink); border: 2px solid var(--ink); padding: 3px 10px; margin: 8px 0 12px; transform: rotate(-1.5deg); }
+  .sub { font-size: 14.5px; display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; color: var(--ink); }
+  .sub b { font-family: 'Anton', sans-serif; font-weight: 400; letter-spacing: .06em; font-size: 15px; }
+  .sub .m { color: var(--muted); }
+  .countdown { display:inline-flex; gap:7px; align-items:center; border: 2px solid var(--ink); background: var(--paper);
+    padding: 4px 12px; font-weight: 600; font-size: 12.5px; text-transform: uppercase; letter-spacing: .06em; }
+  .dot { width:8px; height:8px; border-radius:50%; background: var(--red); animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.3} }
+  .hero-stripes { grid-column: 1 / -1; height: 14px; border-top: 2px solid var(--ink);
+    background: repeating-linear-gradient(90deg, var(--orange) 0 52px, var(--cream) 52px 76px); }
+  @media (max-width: 680px) {
+    .hero { grid-template-columns: 1fr; }
+    .sky { min-height: 130px; border-right: none; border-bottom: 2px solid var(--ink); }
+    h1 { padding-right: 0; }
+    .sun { width: 54px; height: 54px; top: 12px; right: 16px; }
+  }
+
+  /* ===== Tabs ===== */
+  .tabs { display: flex; gap: 10px; margin: 28px 0 18px; }
+  .tab {
+    font-family: 'Anton', sans-serif; font-size: 16px; letter-spacing: .08em; text-transform: uppercase;
+    background: var(--paper2); color: var(--ink); border: 2px solid var(--ink);
+    padding: 9px 20px 8px; cursor: pointer; transition: all .12s;
+  }
+  .tab:hover { box-shadow: 3px 3px 0 var(--ink); transform: translate(-1px,-1px); }
+  .tab.active { background: var(--ink); color: var(--paper); box-shadow: 3px 3px 0 var(--red); }
+
+  /* ===== Controls ===== */
+  .controls { display: flex; flex-direction: column; gap: 12px; margin-bottom: 26px; }
+  .search {
+    max-width: 400px; display: flex; align-items: center; gap: 8px;
+    background: var(--paper2); border: 2px solid var(--ink); padding: 9px 13px;
+  }
+  .search:focus-within { box-shadow: 3px 3px 0 var(--blue); }
+  .search svg { flex-shrink: 0; opacity: .6; }
+  .search input { background: none; border: none; outline: none; color: var(--ink); font: 500 14px 'Inter', sans-serif; width: 100%; }
+  .search input::placeholder { color: var(--muted); }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip {
+    background: var(--paper2); border: 2px solid var(--ink); color: var(--ink);
+    font: 600 12px 'Inter', sans-serif; text-transform: uppercase; letter-spacing: .04em;
+    padding: 6px 12px; cursor: pointer; transition: all .12s;
+  }
+  .chip:hover { box-shadow: 2px 2px 0 var(--ink); transform: translate(-1px,-1px); }
+  .chip.on { background: var(--ink); color: var(--paper); box-shadow: 2px 2px 0 var(--orange); }
+  .chip .n { opacity: .55; font-size: 11px; margin-left: 4px; }
+  .chip.watch-chip.on { box-shadow: 2px 2px 0 var(--pink); }
+
+  /* ===== Section blocks ===== */
+  .section-block { margin-bottom: 42px; }
+  .section-head { display: flex; align-items: center; gap: 12px; margin-bottom: 4px; flex-wrap: wrap; }
+  .section-head h2 {
+    font-family: 'Anton', sans-serif; font-weight: 400; font-size: 26px; text-transform: uppercase;
+    letter-spacing: .02em; line-height: 1;
+    padding: 4px 10px 3px; border: 2px solid var(--ink); color: var(--paper2);
+  }
+  .section-head .count { font-family: 'Anton', sans-serif; font-size: 15px; color: var(--muted); }
+  .section-head .bar { flex: 1; height: 2px; background: var(--ink); min-width: 40px; }
+  .section-head .group-tag { font: 600 10.5px 'Inter', sans-serif; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+  .section-sub { color: var(--muted); font-size: 13px; margin: 6px 0 0; font-weight: 500; }
+  .section-block .grid { margin-top: 14px; }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; }
+  .film {
+    background: var(--paper2); border: 2px solid var(--ink);
+    padding: 15px 15px 13px; display: flex; flex-direction: column; gap: 6px;
+    transition: all .12s; position: relative;
+  }
+  .film:hover { box-shadow: 4px 4px 0 var(--ink); transform: translate(-2px,-2px); }
+  .film .sec-tag { font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--red); padding-right: 30px; }
+  .film h3 { font-family: 'Anton', sans-serif; font-weight: 400; font-size: 19px; line-height: 1.08;
+    text-transform: uppercase; letter-spacing: .015em; padding-right: 26px; }
+  .film h3 a { color: var(--ink); text-decoration: none; }
+  .film h3 a:hover { color: var(--blue); }
+  .film .dir { color: var(--ink); font-size: 13.5px; font-weight: 500; }
+  .film .meta { color: var(--muted); font-size: 12px; margin-top: 1px; }
+  .film .times { margin-top: 8px; display: flex; flex-direction: column; gap: 5px; }
+  .film .times .t {
+    font-size: 12.5px; color: var(--blue-deep); background: rgba(46,111,214,.08);
+    border: 1.5px solid var(--blue); padding: 4px 8px; font-weight: 500;
+  }
+  .film .times .t b { font-weight: 700; }
+  .star {
+    position: absolute; top: 9px; right: 9px; background: none; border: none; cursor: pointer;
+    font-size: 20px; line-height: 1; color: #b9ac96; transition: all .12s; padding: 4px;
+  }
+  .star:hover { transform: scale(1.2); color: var(--orange); }
+  .star.on { color: var(--red); }
+
+  /* ===== Schedule ===== */
+  .days { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+  .day-btn {
+    background: var(--paper2); border: 2px solid var(--ink); padding: 9px 13px 7px;
+    cursor: pointer; text-align: center; min-width: 72px; transition: all .12s; color: var(--ink);
+  }
+  .day-btn .dw { font-size: 10.5px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; display: block; color: var(--muted); }
+  .day-btn .dn { font-family: 'Anton', sans-serif; font-size: 24px; display: block; margin-top: 1px; }
+  .day-btn:hover { box-shadow: 3px 3px 0 var(--ink); transform: translate(-1px,-1px); }
+  .day-btn.on { background: var(--ink); color: var(--paper); box-shadow: 3px 3px 0 var(--red); }
+  .day-btn.on .dw { color: var(--orange); }
+  .day-btn .badge { font-size: 10px; color: var(--red); display: block; margin-top: 2px; font-weight: 700; }
+  .day-btn.on .badge { color: var(--pink); }
+
+  .empty-state {
+    text-align: center; padding: 56px 24px; background: var(--paper2);
+    border: 2px dashed var(--ink); color: var(--muted);
+  }
+  .empty-state .big { font-size: 40px; margin-bottom: 12px; }
+  .empty-state h3 { font-family: 'Anton', sans-serif; font-weight: 400; font-size: 22px; text-transform: uppercase; color: var(--ink); margin-bottom: 8px; }
+  .empty-state p { font-size: 14px; line-height: 1.65; max-width: 460px; margin: 0 auto; }
+  .empty-state a { color: var(--red); font-weight: 600; }
+
+  .slot { display: flex; gap: 16px; padding: 14px 2px; border-bottom: 2px solid rgba(21,20,18,.15); }
+  .slot .time { font-family: 'Anton', sans-serif; font-size: 20px; color: var(--red); min-width: 66px; }
+  .slot .info h4 { font-family: 'Anton', sans-serif; font-weight: 400; font-size: 17px; text-transform: uppercase; }
+  .slot .info h4 a { color: var(--ink); text-decoration: none; }
+  .slot .info h4 a:hover { color: var(--blue); }
+  .slot .info .venue { color: var(--blue-deep); font-size: 13px; margin-top: 3px; font-weight: 600; }
+  .slot .info .extra { color: var(--muted); font-size: 12.5px; margin-top: 2px; }
+
+  .note {
+    margin-top: 30px; font-size: 12.5px; color: var(--ink); background: var(--paper2);
+    border: 2px solid var(--ink); box-shadow: 4px 4px 0 var(--orange);
+    padding: 13px 16px; line-height: 1.65;
+  }
+  .note a { color: var(--red); font-weight: 600; }
+
+  footer { margin-top: 48px; padding-top: 18px; border-top: 2px solid var(--ink); color: var(--muted); font-size: 12.5px; line-height: 1.7; }
+  footer a { color: var(--red); text-decoration: none; font-weight: 600; }
+  .hidden { display: none !important; }
+  @media (max-width: 560px) {
+    .grid { grid-template-columns: 1fr 1fr; }
+    .film h3 { font-size: 16px; }
+    .film { padding: 12px 12px 11px; }
+    .section-head h2 { font-size: 20px; }
+  }
+  @media (max-width: 400px) { .grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="stripes-top"></div>
+<div class="edge">XXIII GOLDEN APRICOT IFF — 12.07 / 19.07 2026 — GAIFF.AM</div>
+<div class="wrap">
+
+<header>
+  <div class="hero">
+    <div class="sky">
+      <svg viewBox="0 0 300 230" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+        <!-- sketchy frame lines -->
+        <rect x="14" y="12" width="272" height="206" fill="none" stroke="rgba(21,20,18,.55)" stroke-width="1.5"/>
+        <line x1="14" y1="52" x2="286" y2="52" stroke="rgba(21,20,18,.4)" stroke-width="1"/>
+        <line x1="150" y1="12" x2="150" y2="52" stroke="rgba(21,20,18,.4)" stroke-width="1"/>
+        <!-- cloud -->
+        <ellipse cx="115" cy="86" rx="78" ry="20" fill="#e8ebee" opacity=".92"/>
+        <ellipse cx="160" cy="74" rx="46" ry="14" fill="#dfe3e6" opacity=".85"/>
+        <!-- Ararat -->
+        <polygon points="150,58 242,230 58,230" fill="#151412"/>
+        <polygon points="150,58 176,112 163,101 150,117 136,99 124,110" fill="#f4f2ec"/>
+      </svg>
+    </div>
+    <div class="hero-main">
+      <div class="sun"></div>
+      <div class="kicker">XXIII Yerevan International Film Festival</div>
+      <h1>Golden<br>Apricot <span class="y">2026</span></h1>
+      <div class="poem">Be a Poem</div>
+      <div class="sub">
+        <span><b>12.07 — 19.07 2026</b></span>
+        <span class="m" id="filmCount"></span>
+        <span class="countdown"><span class="dot"></span><span id="countdown"></span></span>
+      </div>
+    </div>
+    <div class="hero-stripes"></div>
+  </div>
+</header>
+
+<nav class="tabs">
+  <button class="tab active" data-view="films">Films</button>
+  <button class="tab" data-view="schedule">Schedule</button>
+</nav>
+
+<div class="controls">
+  <label class="search">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input id="q" type="search" placeholder="Search films, directors, sections…" autocomplete="off">
+  </label>
+  <div class="chips" id="chips"></div>
+</div>
+
+<main id="filmsView"></main>
+
+<main id="scheduleView" class="hidden">
+  <div class="days" id="days"></div>
+  <div id="daySlots"></div>
+</main>
+
+<div class="note" id="tbaNote">
+  <b>ℹ Screening times & venues:</b> GAIFF hasn't published the 2026 screening schedule yet.
+  As soon as times and locations are announced, they'll appear here — both on each film card and in the Schedule tab.
+  Meanwhile, star ★ the films you want to catch and they'll be saved on this device.
+  Films appearing in several sections (e.g. Babystar in Competition and Made in Germany) share one ★ everywhere.
+</div>
+
+<footer>
+  Unofficial fan-made program browser. All film data from <a href="https://gaiff.am/program" target="_blank" rel="noopener">gaiff.am</a> —
+  tap any film title for full details, synopsis & trailer on the official site.
+</footer>
+
+</div>
+
+<script>
+/* ============================================================
+   DATA lives in data.json — edit that file to update the
+   program, film details (country/runtime/year) and, once
+   announced, the screening schedule. Shape:
+   {
+     "festival": { "start": "2026-07-12", "end": "2026-07-19" },
+     "sections": [ { "id", "name", "color", "group"?, "sub"? } ],
+     "films": [ { "id", "title", "dir", "secs": [..], "country", "runtime", "year", "url" } ],
+     "screenings": [ { "film": "<film id>", "date": "2026-07-13", "time": "19:00", "venue": "Moscow Cinema, Red Hall", "note"? } ]
+   }
+   ============================================================ */
+let FESTIVAL = {}, SECTIONS = [], FILMS = [], SCREENINGS = [];
+
+async function loadData() {
+  const res = await fetch('data.json', { cache: 'no-cache' });
+  if (!res.ok) throw new Error('data.json: HTTP ' + res.status);
+  const d = await res.json();
+  FESTIVAL = d.festival;
+  SECTIONS = d.sections;
+  FILMS = d.films;
+  SCREENINGS = d.screenings || [];
+}
+
+
+/* ============================================================
+   APP
+   ============================================================ */
+const $ = s => document.querySelector(s);
+const secName = id => SECTIONS.find(s => s.id === id)?.name || id;
+const watch = new Set(JSON.parse(localStorage.getItem('gaiff26_watch') || '[]'));
+const saveWatch = () => localStorage.setItem('gaiff26_watch', JSON.stringify([...watch]));
+
+let state = { view: 'films', q: '', sec: 'all', day: null };
+
+/* meta line from country / runtime / year (any of them may be null) */
+function metaStr(f) {
+  return [f.country, f.runtime ? f.runtime + ' min' : null, f.year]
+    .filter(Boolean).join(' · ');
+}
+
+/* countdown */
+function renderCountdown() {
+  const now = new Date();
+  const start = new Date(FESTIVAL.start + 'T00:00:00');
+  const end = new Date(FESTIVAL.end + 'T23:59:59');
+  let txt;
+  if (now < start) {
+    const d = Math.ceil((start - now) / 864e5);
+    txt = d === 1 ? 'Starts tomorrow' : `Starts in ${d} days`;
+  } else if (now <= end) {
+    txt = 'Festival is on';
+  } else {
+    txt = 'Festival has ended';
+  }
+  $('#countdown').textContent = txt;
+}
+
+/* chips */
+function renderChips() {
+  const c = $('#chips');
+  c.innerHTML = '';
+  const mk = (id, label, n, cls) => {
+    const b = document.createElement('button');
+    b.className = 'chip' + (cls ? ' ' + cls : '') + (state.sec === id ? ' on' : '');
+    b.innerHTML = label + (n != null ? `<span class="n">${n}</span>` : '');
+    b.onclick = () => { state.sec = id; renderChips(); render(); };
+    c.appendChild(b);
+  };
+  mk('all', 'All', FILMS.length);
+  SECTIONS.forEach(s => mk(s.id, s.name, FILMS.filter(f => f.secs.includes(s.id)).length));
+  mk('watch', '★ My list', watch.size, 'watch-chip');
+}
+
+function matches(f) {
+  if (state.sec === 'watch' && !watch.has(f.id)) return false;
+  if (state.sec !== 'all' && state.sec !== 'watch' && !f.secs.includes(state.sec)) return false;
+  if (state.q) {
+    const hay = (f.title + ' ' + f.dir + ' ' + metaStr(f) + ' ' + f.secs.map(secName).join(' ')).toLowerCase();
+    if (!hay.includes(state.q)) return false;
+  }
+  return true;
+}
+
+function filmCard(f) {
+  const shows = SCREENINGS.filter(s => s.film === f.id);
+  const times = shows.map(s => {
+    const d = new Date(s.date + 'T12:00');
+    const day = d.toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short' });
+    return `<div class="t"><b>${day} · ${s.time}</b> — ${s.venue}${s.note ? ' · ' + s.note : ''}</div>`;
+  }).join('');
+  return `<article class="film">
+    <button class="star ${watch.has(f.id) ? 'on' : ''}" data-star="${f.id}" title="Add to my list">${watch.has(f.id) ? '★' : '☆'}</button>
+    <div class="sec-tag">${f.secs.map(secName).join(' · ')}</div>
+    <h3><a href="${f.url}" target="_blank" rel="noopener">${f.title}</a></h3>
+    <div class="dir">${f.dir}</div>
+    ${metaStr(f) ? `<div class="meta">${metaStr(f)}</div>` : ''}
+    ${times ? `<div class="times">${times}</div>` : ''}
+  </article>`;
+}
+
+function renderFilms() {
+  const v = $('#filmsView');
+  const list = FILMS.filter(matches);
+  if (!list.length) {
+    v.innerHTML = `<div class="empty-state"><div class="big">🔍</div><h3>Nothing found</h3><p>Try a different search or filter.</p></div>`;
+    return;
+  }
+  let html = '';
+  for (const s of SECTIONS) {
+    const inSec = list.filter(f => f.secs.includes(s.id));
+    if (!inSec.length) continue;
+    html += `<div class="section-block">
+      <div class="section-head">
+        ${s.group ? `<span class="group-tag">${s.group}</span>` : ''}
+        <h2 style="background:${s.color}">${s.name}</h2>
+        <span class="count">${inSec.length}</span><span class="bar"></span>
+      </div>
+      ${s.sub ? `<div class="section-sub">${s.sub}</div>` : ''}
+      <div class="grid">${inSec.map(filmCard).join('')}</div>
+    </div>`;
+  }
+  v.innerHTML = html;
+}
+
+/* schedule */
+function festDays() {
+  const days = [];
+  const d = new Date(FESTIVAL.start + 'T12:00');
+  const end = new Date(FESTIVAL.end + 'T12:00');
+  while (d <= end) {
+    days.push(d.toISOString().slice(0, 10));
+    d.setDate(d.getDate() + 1);
+  }
+  return days;
+}
+
+function renderSchedule() {
+  const days = festDays();
+  if (!state.day) state.day = days[0];
+  const dayEl = $('#days');
+  dayEl.innerHTML = '';
+  days.forEach(iso => {
+    const d = new Date(iso + 'T12:00');
+    const n = SCREENINGS.filter(s => s.date === iso && screenMatches(s)).length;
+    const b = document.createElement('button');
+    b.className = 'day-btn' + (state.day === iso ? ' on' : '');
+    b.innerHTML = `<span class="dw">${d.toLocaleDateString('en-GB', { weekday: 'short' })}</span>
+                   <span class="dn">${d.getDate()}</span>
+                   ${n ? `<span class="badge">${n} shows</span>` : ''}`;
+    b.onclick = () => { state.day = iso; renderSchedule(); };
+    dayEl.appendChild(b);
+  });
+
+  const slots = $('#daySlots');
+  if (!SCREENINGS.length) {
+    slots.innerHTML = `<div class="empty-state">
+      <div class="big">🎬</div>
+      <h3>Schedule not announced yet</h3>
+      <p>GAIFF publishes screening times and venues closer to the festival (July 12–19).
+      Once they're out, every screening will show up here by day, time and cinema.
+      Check <a href="https://gaiff.am" target="_blank" rel="noopener">gaiff.am</a> or
+      <a href="https://www.instagram.com/goldenapricotiff/" target="_blank" rel="noopener">@goldenapricotiff</a> for announcements.</p>
+    </div>`;
+    return;
+  }
+  const todays = SCREENINGS
+    .filter(s => s.date === state.day && screenMatches(s))
+    .sort((a, b) => a.time.localeCompare(b.time));
+  if (!todays.length) {
+    slots.innerHTML = `<div class="empty-state"><div class="big">🌙</div><h3>No screenings match</h3><p>Nothing on this day for the current search/filter.</p></div>`;
+    return;
+  }
+  slots.innerHTML = todays.map(s => {
+    const f = FILMS.find(x => x.id === s.film) || { title: s.film, dir: '', url: '#', secs: [] };
+    return `<div class="slot">
+      <div class="time">${s.time}</div>
+      <div class="info">
+        <h4><a href="${f.url}" target="_blank" rel="noopener">${f.title}</a></h4>
+        <div class="venue">📍 ${s.venue}</div>
+        <div class="extra">${f.dir}${f.secs.length ? ' · ' + f.secs.map(secName).join(' · ') : ''}${s.note ? ' · ' + s.note : ''}</div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function screenMatches(s) {
+  const f = FILMS.find(x => x.id === s.film);
+  return f ? matches(f) : true;
+}
+
+/* events */
+document.querySelectorAll('.tab').forEach(t => t.onclick = () => {
+  document.querySelectorAll('.tab').forEach(x => x.classList.toggle('active', x === t));
+  state.view = t.dataset.view;
+  $('#filmsView').classList.toggle('hidden', state.view !== 'films');
+  $('#scheduleView').classList.toggle('hidden', state.view !== 'schedule');
+  render();
+});
+
+$('#q').addEventListener('input', e => { state.q = e.target.value.trim().toLowerCase(); render(); });
+
+document.addEventListener('click', e => {
+  const btn = e.target.closest('[data-star]');
+  if (!btn) return;
+  const id = btn.dataset.star;
+  watch.has(id) ? watch.delete(id) : watch.add(id);
+  saveWatch();
+  renderChips();
+  render();
+});
+
+function render() {
+  if (state.view === 'films') renderFilms(); else renderSchedule();
+}
+
+/* boot */
+loadData()
+  .then(() => {
+    renderCountdown();
+    $('#filmCount').textContent = FILMS.length + ' films · ' + SECTIONS.length + ' sections';
+    renderChips();
+    render();
+  })
+  .catch(err => {
+    $('#filmsView').innerHTML = `<div class="empty-state"><div class="big">⚠️</div>
+      <h3>Couldn't load program data</h3>
+      <p>${err.message}. Make sure <b>data.json</b> is deployed next to index.html.</p></div>`;
+  });
+</script>
+</body>
+</html>
