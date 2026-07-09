@@ -183,6 +183,52 @@
   .day-btn .badge { font-size: 10px; color: var(--red); display: block; margin-top: 2px; font-weight: 700; }
   .day-btn.on .badge { color: var(--pink); }
 
+  /* ===== Schedule list/timeline toggle ===== */
+  .sched-toggle { display: flex; gap: 0; margin-bottom: 20px; width: fit-content; border: 2px solid var(--ink); }
+  .sched-toggle button {
+    font: 600 12px 'Inter', sans-serif; text-transform: uppercase; letter-spacing: .06em;
+    background: var(--paper2); color: var(--ink); border: none; padding: 7px 16px; cursor: pointer;
+  }
+  .sched-toggle button + button { border-left: 2px solid var(--ink); }
+  .sched-toggle button.on { background: var(--ink); color: var(--paper); }
+
+  /* ===== Timeline grid ===== */
+  .timeline { border: 2px solid var(--ink); background: var(--paper2); overflow-x: auto; box-shadow: 5px 5px 0 var(--ink); }
+  .tl-inner { display: grid; }
+  .tl-corner, .tl-venue {
+    position: sticky; top: 0; background: var(--ink); color: var(--paper); z-index: 3;
+    font-family: 'Anton', sans-serif; font-size: 12.5px; letter-spacing: .05em; text-transform: uppercase;
+    padding: 9px 8px 8px; text-align: center; line-height: 1.15;
+  }
+  .tl-venue { border-left: 1.5px solid rgba(246,240,226,.25); }
+  .tl-gutter { position: relative; border-right: 2px solid var(--ink); background: var(--paper); }
+  .tl-hour {
+    position: absolute; right: 5px; transform: translateY(-50%);
+    font: 700 10.5px 'Inter', sans-serif; color: var(--muted);
+  }
+  .tl-col {
+    position: relative; border-left: 1.5px solid rgba(21,20,18,.18);
+    background-image: linear-gradient(rgba(21,20,18,.09) 1px, transparent 1px);
+    background-size: 100% var(--hourpx);
+    background-position: 0 var(--gridoff);
+    min-width: 148px;
+  }
+  .tl-block {
+    position: absolute; left: 5px; right: 5px; border: 2px solid var(--ink);
+    padding: 4px 7px; overflow: hidden; color: var(--paper2); cursor: pointer;
+    transition: all .12s; z-index: 1;
+  }
+  .tl-block:hover { z-index: 2; box-shadow: 3px 3px 0 var(--ink); transform: translate(-1px,-1px); }
+  .tl-block.watched { box-shadow: 0 0 0 3px var(--pink); }
+  .tl-block.watched:hover { box-shadow: 0 0 0 3px var(--pink), 3px 3px 0 var(--ink); }
+  .tl-block .bt { font: 700 10px 'Inter', sans-serif; opacity: .85; }
+  .tl-block .bn { font-family: 'Anton', sans-serif; font-weight: 400; font-size: 12.5px; line-height: 1.12; letter-spacing: .02em; text-transform: uppercase; margin-top: 1px; }
+  .tl-block .bn + .bn { margin-top: 3px; padding-top: 3px; border-top: 1px dashed rgba(246,240,226,.4); }
+  .tl-block.tba { background: repeating-linear-gradient(45deg, #4a463f 0 10px, #3a3733 10px 20px) !important; }
+  .tl-legend { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 12px; font: 600 11px 'Inter', sans-serif; color: var(--muted); }
+  .tl-legend span { display: inline-flex; align-items: center; gap: 5px; }
+  .tl-legend i { width: 11px; height: 11px; border: 1.5px solid var(--ink); display: inline-block; }
+
   .empty-state {
     text-align: center; padding: 56px 24px; background: var(--paper2);
     border: 2px dashed var(--ink); color: var(--muted);
@@ -272,6 +318,10 @@
 
 <main id="scheduleView" class="hidden">
   <div class="days" id="days"></div>
+  <div class="sched-toggle" id="schedToggle">
+    <button data-smode="list" class="on">List</button>
+    <button data-smode="grid">Timeline</button>
+  </div>
   <div id="daySlots"></div>
 </main>
 
@@ -321,7 +371,7 @@ const secName = id => SECTIONS.find(s => s.id === id)?.name || id;
 const watch = new Set(JSON.parse(localStorage.getItem('gaiff26_watch') || '[]'));
 const saveWatch = () => localStorage.setItem('gaiff26_watch', JSON.stringify([...watch]));
 
-let state = { view: 'films', q: '', sec: 'all', day: null };
+let state = { view: 'films', q: '', sec: 'all', day: null, smode: 'list' };
 
 /* meta line from country / runtime / year (any of them may be null) */
 function metaStr(f) {
@@ -462,6 +512,7 @@ function renderSchedule() {
     slots.innerHTML = `<div class="empty-state"><div class="big">🌙</div><h3>No screenings match</h3><p>Nothing on this day for the current search/filter.</p></div>`;
     return;
   }
+  if (state.smode === 'grid') { slots.innerHTML = renderTimeline(todays); return; }
   slots.innerHTML = todays.map(s => {
     const f = FILMS.find(x => x.id === s.film) || { title: s.title || s.film || 'TBA', dir: '', url: null, secs: [] };
     return `<div class="slot">
@@ -473,6 +524,77 @@ function renderSchedule() {
       </div>
     </div>`;
   }).join('');
+}
+
+/* ===== Timeline (grid) view ===== */
+const VENUE_ORDER = ['Cinema House, Grand Hall', 'Cinema House, Malyan Hall', 'Nairi Cinema', 'Moscow Cinema, Blue Hall', 'Moscow Cinema, Red Hall'];
+const PX_PER_MIN = 1.8;
+const toMin = t => +t.slice(0, 2) * 60 + +t.slice(3, 5);
+
+function renderTimeline(todays) {
+  const venues = VENUE_ORDER.filter(v => todays.some(s => s.venue === v));
+  todays.forEach(s => { if (!venues.includes(s.venue)) venues.push(s.venue); });
+
+  // merge same venue+time into one block (shorts programmes screen back-to-back)
+  const groups = {};
+  for (const s of todays) {
+    const key = s.venue + '|' + s.time;
+    (groups[key] = groups[key] || []).push(s);
+  }
+  const blocks = Object.values(groups).map(g => {
+    const items = g.map(s => {
+      const f = FILMS.find(x => x.id === s.film);
+      return { title: f ? f.title : (s.title || 'TBA'), url: f?.url || null, runtime: f?.runtime || 100, sec: f?.secs[0], id: f?.id, note: s.note, tba: !f };
+    });
+    return {
+      venue: g[0].venue, time: g[0].time, start: toMin(g[0].time),
+      dur: items.reduce((a, i) => a + i.runtime, 0), items,
+    };
+  });
+
+  const t0 = Math.floor(Math.min(...blocks.map(b => b.start)) / 60) * 60;
+  const t1 = Math.ceil(Math.max(...blocks.map(b => b.start + b.dur)) / 60) * 60;
+  const H = (t1 - t0) * PX_PER_MIN;
+  const hourpx = 60 * PX_PER_MIN;
+
+  let gutter = '';
+  for (let m = t0; m <= t1; m += 60) {
+    gutter += `<div class="tl-hour" style="top:${(m - t0) * PX_PER_MIN}px">${String(m / 60).padStart(2, '0')}:00</div>`;
+  }
+
+  const cols = venues.map(v => {
+    const inCol = blocks.filter(b => b.venue === v);
+    const blockHtml = inCol.map(b => {
+      const top = (b.start - t0) * PX_PER_MIN;
+      const h = Math.max(b.dur * PX_PER_MIN, 34);
+      const color = b.items[0].tba ? '#4a463f' : (SECTIONS.find(s => s.id === b.items[0].sec)?.color || '#151412');
+      const starred = b.items.some(i => i.id && watch.has(i.id));
+      const names = b.items.map(i => `<div class="bn">${i.title}</div>`).join('');
+      const url = b.items.find(i => i.url)?.url;
+      const end = b.start + b.dur;
+      const endStr = `${String(Math.floor(end / 60) % 24).padStart(2, '0')}:${String(end % 60).padStart(2, '0')}`;
+      return `<div class="tl-block ${starred ? 'watched' : ''} ${b.items[0].tba ? 'tba' : ''}"
+        style="top:${top}px; height:${h}px; background:${color}"
+        ${url ? `onclick="window.open('${url}','_blank')"` : ''}
+        title="${b.time}–${endStr} · ${b.items.map(i => i.title).join(' + ')}${b.items[0].note ? ' · ' + b.items[0].note : ''}">
+        <div class="bt">${b.time} · ${b.dur}′${starred ? ' ★' : ''}</div>${names}
+      </div>`;
+    }).join('');
+    return `<div class="tl-col" style="height:${H}px; --hourpx:${hourpx}px; --gridoff:0px">${blockHtml}</div>`;
+  }).join('');
+
+  const shortV = v => v.replace('Cinema House, ', 'Cinema House · ').replace('Moscow Cinema, ', 'Moscow · ');
+  const legend = SECTIONS
+    .filter(sc => todays.some(s => { const f = FILMS.find(x => x.id === s.film); return f && f.secs[0] === sc.id; }))
+    .map(sc => `<span><i style="background:${sc.color}"></i>${sc.name}</span>`).join('');
+
+  return `<div class="timeline"><div class="tl-inner" style="grid-template-columns: 52px repeat(${venues.length}, minmax(148px, 1fr))">
+      <div class="tl-corner"></div>
+      ${venues.map(v => `<div class="tl-venue">${shortV(v)}</div>`).join('')}
+      <div class="tl-gutter" style="height:${H}px">${gutter}</div>
+      ${cols}
+    </div></div>
+    <div class="tl-legend">${legend}${legend ? '<span><i style="background:#4a463f"></i>Special / winner</span><span>★ pink ring = my list</span>' : ''}</div>`;
 }
 
 function screenMatches(s) {
@@ -494,6 +616,12 @@ document.querySelectorAll('.tab').forEach(t => t.onclick = () => {
 });
 
 $('#q').addEventListener('input', e => { state.q = e.target.value.trim().toLowerCase(); render(); });
+
+document.querySelectorAll('#schedToggle button').forEach(b => b.onclick = () => {
+  state.smode = b.dataset.smode;
+  document.querySelectorAll('#schedToggle button').forEach(x => x.classList.toggle('on', x === b));
+  renderSchedule();
+});
 
 document.addEventListener('click', e => {
   const btn = e.target.closest('[data-star]');
