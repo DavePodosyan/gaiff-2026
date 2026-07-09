@@ -276,10 +276,9 @@
 </main>
 
 <div class="note" id="tbaNote">
-  <b>ℹ Screening times & venues:</b> GAIFF hasn't published the 2026 screening schedule yet.
-  As soon as times and locations are announced, they'll appear here — both on each film card and in the Schedule tab.
-  Meanwhile, star ★ the films you want to catch and they'll be saved on this device.
-  Films appearing in several sections (e.g. Babystar in Competition and Made in Germany) share one ★ everywhere.
+  <b>ℹ Tip:</b> star ★ the films you want to catch — they're saved on this device, and the ★ syncs across
+  every section a film appears in. Showtimes are on each film card and in the Schedule tab.
+  July 20 screenings are the award-winning films, announced at the closing ceremony.
 </div>
 
 <footer>
@@ -383,7 +382,7 @@ function filmCard(f) {
   return `<article class="film">
     <button class="star ${watch.has(f.id) ? 'on' : ''}" data-star="${f.id}" title="Add to my list">${watch.has(f.id) ? '★' : '☆'}</button>
     <div class="sec-tag">${f.secs.map(secName).join(' · ')}</div>
-    <h3><a href="${f.url}" target="_blank" rel="noopener">${f.title}</a></h3>
+    <h3>${f.url ? `<a href="${f.url}" target="_blank" rel="noopener">${f.title}</a>` : f.title}</h3>
     <div class="dir">${f.dir}</div>
     ${metaStr(f) ? `<div class="meta">${metaStr(f)}</div>` : ''}
     ${times ? `<div class="times">${times}</div>` : ''}
@@ -416,14 +415,15 @@ function renderFilms() {
 
 /* schedule */
 function festDays() {
-  const days = [];
+  const days = new Set();
   const d = new Date(FESTIVAL.start + 'T12:00');
   const end = new Date(FESTIVAL.end + 'T12:00');
   while (d <= end) {
-    days.push(d.toISOString().slice(0, 10));
+    days.add(d.toISOString().slice(0, 10));
     d.setDate(d.getDate() + 1);
   }
-  return days;
+  SCREENINGS.forEach(s => days.add(s.date)); // e.g. winner re-runs after closing
+  return [...days].sort();
 }
 
 function renderSchedule() {
@@ -463,11 +463,11 @@ function renderSchedule() {
     return;
   }
   slots.innerHTML = todays.map(s => {
-    const f = FILMS.find(x => x.id === s.film) || { title: s.film, dir: '', url: '#', secs: [] };
+    const f = FILMS.find(x => x.id === s.film) || { title: s.title || s.film || 'TBA', dir: '', url: null, secs: [] };
     return `<div class="slot">
       <div class="time">${s.time}</div>
       <div class="info">
-        <h4><a href="${f.url}" target="_blank" rel="noopener">${f.title}</a></h4>
+        <h4>${f.url ? `<a href="${f.url}" target="_blank" rel="noopener">${f.title}</a>` : f.title}</h4>
         <div class="venue">📍 ${s.venue}</div>
         <div class="extra">${f.dir}${f.secs.length ? ' · ' + f.secs.map(secName).join(' · ') : ''}${s.note ? ' · ' + s.note : ''}</div>
       </div>
@@ -477,7 +477,11 @@ function renderSchedule() {
 
 function screenMatches(s) {
   const f = FILMS.find(x => x.id === s.film);
-  return f ? matches(f) : true;
+  if (f) return matches(f);
+  // title-only screenings (e.g. winner films, special screenings)
+  if (state.sec !== 'all') return false;
+  if (state.q) return ((s.title || '') + ' ' + (s.note || '')).toLowerCase().includes(state.q);
+  return true;
 }
 
 /* events */

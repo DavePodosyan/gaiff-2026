@@ -1010,13 +1010,73 @@
       "runtime": null,
       "year": null,
       "url": "https://gaiff.am/amelie"
+    },
+    {
+      "id": "aborted",
+      "title": "Aborted",
+      "dir": "Vrezh Kassouny",
+      "secs": [
+        "oosc"
+      ],
+      "country": null,
+      "runtime": 13,
+      "year": null,
+      "url": null
+    },
+    {
+      "id": "miles",
+      "title": "Miles",
+      "dir": "Oksana Mirzoyan",
+      "secs": [
+        "oosc"
+      ],
+      "country": null,
+      "runtime": 9,
+      "year": null,
+      "url": null
     }
   ],
   "screenings": [
     {
+      "film": "bashu",
+      "date": "2026-07-12",
+      "time": "19:00",
+      "venue": "Cinema House, Grand Hall"
+    },
+    {
+      "film": "hotel",
+      "date": "2026-07-12",
+      "time": "21:30",
+      "venue": "Cinema House, Grand Hall"
+    },
+    {
+      "film": "highwaydeer",
+      "date": "2026-07-12",
+      "time": "16:00",
+      "venue": "Cinema House, Malyan Hall"
+    },
+    {
+      "film": "garden",
+      "date": "2026-07-12",
+      "time": "18:00",
+      "venue": "Cinema House, Malyan Hall"
+    },
+    {
+      "film": "habibi",
+      "date": "2026-07-12",
+      "time": "19:30",
+      "venue": "Cinema House, Malyan Hall"
+    },
+    {
+      "film": "twomountains",
+      "date": "2026-07-12",
+      "time": "21:30",
+      "venue": "Cinema House, Malyan Hall"
+    },
+    {
       "film": "pastfuture",
       "date": "2026-07-12",
-      "time": "12:00",
+      "time": "11:00",
       "venue": "Nairi Cinema"
     },
     {
@@ -1026,52 +1086,16 @@
       "venue": "Nairi Cinema"
     },
     {
-      "film": "highwaydeer",
-      "date": "2026-07-12",
-      "time": "16:00",
-      "venue": "Cinema House, Malyan Hall"
-    },
-    {
       "film": "babystar",
       "date": "2026-07-12",
       "time": "18:00",
       "venue": "Nairi Cinema"
     },
     {
-      "film": "garden",
-      "date": "2026-07-12",
-      "time": "18:00",
-      "venue": "Cinema House, Malyan Hall"
-    },
-    {
-      "film": "bashu",
-      "date": "2026-07-12",
-      "time": "19:00",
-      "venue": "Cinema House, Grand Hall"
-    },
-    {
-      "film": "habibi",
-      "date": "2026-07-12",
-      "time": "19:30",
-      "venue": "Cinema House, Malyan Hall"
-    },
-    {
       "film": "ddtxx",
       "date": "2026-07-12",
       "time": "20:00",
       "venue": "Nairi Cinema"
-    },
-    {
-      "film": "twomountains",
-      "date": "2026-07-12",
-      "time": "21:30",
-      "venue": "Cinema House, Malyan Hall"
-    },
-    {
-      "film": "hotel",
-      "date": "2026-07-12",
-      "time": "21:30",
-      "venue": "Cinema House, Grand Hall"
     },
     {
       "film": "obsession",
@@ -1086,44 +1110,20 @@
       "venue": "Cinema House, Malyan Hall"
     },
     {
-      "film": "borders",
-      "date": "2026-07-13",
-      "time": "10:00",
-      "venue": "Nairi Cinema"
-    },
-    {
       "film": "habibi",
       "date": "2026-07-13",
       "time": "12:30",
       "venue": "Cinema House, Malyan Hall"
     },
     {
+      "film": "borders",
+      "date": "2026-07-13",
+      "time": "10:00",
+      "venue": "Nairi Cinema"
+    },
+    {
       "film": "currents",
       "date": "2026-07-13",
-      "time": "12:30",
-      "venue": "Nairi Cinema"
-    },
-    {
-      "film": "fire",
-      "date": "2026-07-14",
-      "time": "10:00",
-      "venue": "Cinema House, Malyan Hall"
-    },
-    {
-      "film": "father",
-      "date": "2026-07-14",
-      "time": "10:00",
-      "venue": "Nairi Cinema"
-    },
-    {
-      "film": "elsewhere",
-      "date": "2026-07-14",
-      "time": "12:30",
-      "venue": "Cinema House, Malyan Hall"
-    },
-    {
-      "film": "lion",
-      "date": "2026-07-14",
       "time": "12:30",
       "venue": "Nairi Cinema"
     },
@@ -1134,9 +1134,75 @@
       "venue": "Cinema House, Grand Hall"
     },
     {
+      "film": "danceoflife",
+      "date": "2026-07-14",
+      "time": "19:30",
+      "venue": "Cinema House, Grand Hall"
+    },
+    {
+      "film": "clubzero",
+      "date": "2026-07-14",
+      "time": "22:00",
+      "venue": "Cinema House, Grand Hall"
+    },
+    {
+      "film": "fire",
+      "date": "2026-07-14",
+      "time": "10:00",
+      "venue": "Cinema House, Malyan Hall"
+    },
+    {
+      "film": "elsewhere",
+      "date": "2026-07-14",
+      "time": "12:30",
+      "venue": "Cinema House, Malyan Hall"
+    },
+    {
+      "film": "west",
+      "date": "2026-07-14",
+      "time": "17:30",
+      "venue": "Cinema House, Malyan Hall"
+    },
+    {
+      "film": "elsewhere",
+      "date": "2026-07-14",
+      "time": "19:30",
+      "venue": "Cinema House, Malyan Hall"
+    },
+    {
+      "film": "thecase",
+      "date": "2026-07-14",
+      "time": "21:30",
+      "venue": "Cinema House, Malyan Hall"
+    },
+    {
+      "film": "father",
+      "date": "2026-07-14",
+      "time": "10:00",
+      "venue": "Nairi Cinema"
+    },
+    {
+      "film": "lion",
+      "date": "2026-07-14",
+      "time": "12:30",
+      "venue": "Nairi Cinema"
+    },
+    {
       "film": "borders",
       "date": "2026-07-14",
       "time": "18:00",
+      "venue": "Nairi Cinema"
+    },
+    {
+      "film": "dreams",
+      "date": "2026-07-14",
+      "time": "20:00",
+      "venue": "Nairi Cinema"
+    },
+    {
+      "film": "rosebush",
+      "date": "2026-07-14",
+      "time": "22:00",
       "venue": "Nairi Cinema"
     },
     {
@@ -1146,28 +1212,500 @@
       "venue": "Moscow Cinema, Blue Hall"
     },
     {
-      "film": "danceoflife",
-      "date": "2026-07-14",
-      "time": "19:30",
-      "venue": "Cinema House, Grand Hall"
-    },
-    {
-      "film": "dreams",
-      "date": "2026-07-14",
-      "time": "20:00",
-      "venue": "Nairi Cinema"
-    },
-    {
       "film": "fjord",
       "date": "2026-07-14",
       "time": "21:00",
       "venue": "Moscow Cinema, Red Hall"
     },
     {
-      "film": "rosebush",
-      "date": "2026-07-14",
+      "film": "dreams",
+      "date": "2026-07-15",
+      "time": "18:00",
+      "venue": "Cinema House, Grand Hall"
+    },
+    {
+      "film": "bitter",
+      "date": "2026-07-15",
+      "time": "20:00",
+      "venue": "Cinema House, Grand Hall"
+    },
+    {
+      "film": "diemylove",
+      "date": "2026-07-15",
+      "time": "22:30",
+      "venue": "Cinema House, Grand Hall"
+    },
+    {
+      "film": "hasan",
+      "date": "2026-07-15",
+      "time": "10:00",
+      "venue": "Cinema House, Malyan Hall"
+    },
+    {
+      "film": "safeexit",
+      "date": "2026-07-15",
+      "time": "12:30",
+      "venue": "Cinema House, Malyan Hall"
+    },
+    {
+      "film": "razlogov",
+      "date": "2026-07-15",
+      "time": "17:30",
+      "venue": "Cinema House, Malyan Hall"
+    },
+    {
+      "film": "safeexit",
+      "date": "2026-07-15",
+      "time": "19:30",
+      "venue": "Cinema House, Malyan Hall"
+    },
+    {
+      "film": "fire",
+      "date": "2026-07-15",
+      "time": "21:30",
+      "venue": "Cinema House, Malyan Hall"
+    },
+    {
+      "film": "tristan",
+      "date": "2026-07-15",
+      "time": "10:00",
+      "venue": "Nairi Cinema"
+    },
+    {
+      "film": "moon",
+      "date": "2026-07-15",
+      "time": "12:30",
+      "venue": "Nairi Cinema"
+    },
+    {
+      "film": "currents",
+      "date": "2026-07-15",
+      "time": "17:30",
+      "venue": "Nairi Cinema"
+    },
+    {
+      "film": "amelie",
+      "date": "2026-07-15",
+      "time": "19:30",
+      "venue": "Nairi Cinema"
+    },
+    {
+      "film": "saccharine",
+      "date": "2026-07-15",
       "time": "22:00",
       "venue": "Nairi Cinema"
+    },
+    {
+      "film": "father",
+      "date": "2026-07-15",
+      "time": "19:00",
+      "venue": "Moscow Cinema, Blue Hall"
+    },
+    {
+      "film": "theunknown",
+      "date": "2026-07-15",
+      "time": "21:00",
+      "venue": "Moscow Cinema, Red Hall"
+    },
+    {
+      "film": "sandiwara",
+      "date": "2026-07-16",
+      "time": "18:00",
+      "venue": "Cinema House, Grand Hall"
+    },
+    {
+      "film": "aborted",
+      "date": "2026-07-16",
+      "time": "18:00",
+      "venue": "Cinema House, Grand Hall"
+    },
+    {
+      "film": "theday",
+      "date": "2026-07-16",
+      "time": "18:00",
+      "venue": "Cinema House, Grand Hall"
+    },
+    {
+      "film": "fatherland",
+      "date": "2026-07-16",
+      "time": "19:30",
+      "venue": "Cinema House, Grand Hall"
+    },
+    {
+      "film": "adventure",
+      "date": "2026-07-16",
+      "time": "21:30",
+      "venue": "Cinema House, Grand Hall"
+    },
+    {
+      "film": "dryleaf",
+      "date": "2026-07-16",
+      "time": "10:00",
+      "venue": "Cinema House, Malyan Hall"
+    },
+    {
+      "film": "dream",
+      "date": "2026-07-16",
+      "time": "14:00",
+      "venue": "Cinema House, Malyan Hall"
+    },
+    {
+      "film": "dream",
+      "date": "2026-07-16",
+      "time": "17:30",
+      "venue": "Cinema House, Malyan Hall"
+    },
+    {
+      "film": "hasan",
+      "date": "2026-07-16",
+      "time": "19:00",
+      "venue": "Cinema House, Malyan Hall"
+    },
+    {
+      "film": "minimumlove",
+      "date": "2026-07-16",
+      "time": "21:30",
+      "venue": "Cinema House, Malyan Hall"
+    },
+    {
+      "film": "nogoodmen",
+      "date": "2026-07-16",
+      "time": "10:00",
+      "venue": "Nairi Cinema"
+    },
+    {
+      "film": "shakespeare",
+      "date": "2026-07-16",
+      "time": "12:30",
+      "venue": "Nairi Cinema"
+    },
+    {
+      "film": "tristan",
+      "date": "2026-07-16",
+      "time": "18:00",
+      "venue": "Nairi Cinema"
+    },
+    {
+      "film": "bitter",
+      "date": "2026-07-16",
+      "time": "20:00",
+      "venue": "Nairi Cinema"
+    },
+    {
+      "film": "campmiasma",
+      "date": "2026-07-16",
+      "time": "22:00",
+      "venue": "Nairi Cinema"
+    },
+    {
+      "film": "hair",
+      "date": "2026-07-16",
+      "time": "19:00",
+      "venue": "Moscow Cinema, Blue Hall"
+    },
+    {
+      "film": "degaulle",
+      "date": "2026-07-16",
+      "time": "19:00",
+      "venue": "Moscow Cinema, Red Hall",
+      "note": "Part 1: The Sovereign Edge"
+    },
+    {
+      "film": "together",
+      "date": "2026-07-17",
+      "time": "17:30",
+      "venue": "Cinema House, Grand Hall"
+    },
+    {
+      "film": "lola",
+      "date": "2026-07-17",
+      "time": "17:30",
+      "venue": "Cinema House, Grand Hall"
+    },
+    {
+      "film": "herostrat",
+      "date": "2026-07-17",
+      "time": "17:30",
+      "venue": "Cinema House, Grand Hall"
+    },
+    {
+      "film": "mourners",
+      "date": "2026-07-17",
+      "time": "17:30",
+      "venue": "Cinema House, Grand Hall"
+    },
+    {
+      "film": "relic",
+      "date": "2026-07-17",
+      "time": "17:30",
+      "venue": "Cinema House, Grand Hall"
+    },
+    {
+      "film": "quietblue",
+      "date": "2026-07-17",
+      "time": "20:00",
+      "venue": "Cinema House, Grand Hall"
+    },
+    {
+      "film": "kafka",
+      "date": "2026-07-17",
+      "time": "20:00",
+      "venue": "Cinema House, Grand Hall"
+    },
+    {
+      "film": "forthose",
+      "date": "2026-07-17",
+      "time": "20:00",
+      "venue": "Cinema House, Grand Hall"
+    },
+    {
+      "film": "dialogues",
+      "date": "2026-07-17",
+      "time": "20:00",
+      "venue": "Cinema House, Grand Hall"
+    },
+    {
+      "film": "eternalred",
+      "date": "2026-07-17",
+      "time": "20:00",
+      "venue": "Cinema House, Grand Hall"
+    },
+    {
+      "film": "bigstory",
+      "date": "2026-07-17",
+      "time": "22:30",
+      "venue": "Cinema House, Grand Hall"
+    },
+    {
+      "film": "amir",
+      "date": "2026-07-17",
+      "time": "10:00",
+      "venue": "Cinema House, Malyan Hall"
+    },
+    {
+      "film": "calendar",
+      "date": "2026-07-17",
+      "time": "12:30",
+      "venue": "Cinema House, Malyan Hall"
+    },
+    {
+      "film": null,
+      "date": "2026-07-17",
+      "time": "15:30",
+      "venue": "Cinema House, Malyan Hall",
+      "title": "Wondrous Is the Silence of My Master",
+      "note": "Special screening · dir. Ivan Salatić"
+    },
+    {
+      "film": "mariinka",
+      "date": "2026-07-17",
+      "time": "17:30",
+      "venue": "Cinema House, Malyan Hall"
+    },
+    {
+      "film": "dryleaf",
+      "date": "2026-07-17",
+      "time": "19:30",
+      "venue": "Cinema House, Malyan Hall"
+    },
+    {
+      "film": "lovelyrita",
+      "date": "2026-07-17",
+      "time": "23:00",
+      "venue": "Cinema House, Malyan Hall"
+    },
+    {
+      "film": "london",
+      "date": "2026-07-17",
+      "time": "10:00",
+      "venue": "Nairi Cinema"
+    },
+    {
+      "film": "hair",
+      "date": "2026-07-17",
+      "time": "13:00",
+      "venue": "Nairi Cinema"
+    },
+    {
+      "film": "pastfuture",
+      "date": "2026-07-17",
+      "time": "18:00",
+      "venue": "Nairi Cinema"
+    },
+    {
+      "film": "fatherland",
+      "date": "2026-07-17",
+      "time": "19:30",
+      "venue": "Nairi Cinema"
+    },
+    {
+      "film": "cafeflesh",
+      "date": "2026-07-17",
+      "time": "22:00",
+      "venue": "Nairi Cinema"
+    },
+    {
+      "film": "moon",
+      "date": "2026-07-17",
+      "time": "19:00",
+      "venue": "Moscow Cinema, Blue Hall"
+    },
+    {
+      "film": "shakespeare",
+      "date": "2026-07-17",
+      "time": "21:00",
+      "venue": "Moscow Cinema, Red Hall"
+    },
+    {
+      "film": "docfilm",
+      "date": "2026-07-18",
+      "time": "14:30",
+      "venue": "Cinema House, Grand Hall"
+    },
+    {
+      "film": "domestic",
+      "date": "2026-07-18",
+      "time": "17:00",
+      "venue": "Cinema House, Grand Hall"
+    },
+    {
+      "film": "miles",
+      "date": "2026-07-18",
+      "time": "17:00",
+      "venue": "Cinema House, Grand Hall"
+    },
+    {
+      "film": "swallow",
+      "date": "2026-07-18",
+      "time": "17:00",
+      "venue": "Cinema House, Grand Hall"
+    },
+    {
+      "film": "degaulle",
+      "date": "2026-07-18",
+      "time": "18:30",
+      "venue": "Cinema House, Grand Hall",
+      "note": "Part 2: Liberté"
+    },
+    {
+      "film": "fjord",
+      "date": "2026-07-18",
+      "time": "22:00",
+      "venue": "Cinema House, Grand Hall"
+    },
+    {
+      "film": "mybigfat",
+      "date": "2026-07-18",
+      "time": "15:00",
+      "venue": "Cinema House, Malyan Hall"
+    },
+    {
+      "film": "calendar",
+      "date": "2026-07-18",
+      "time": "17:30",
+      "venue": "Cinema House, Malyan Hall"
+    },
+    {
+      "film": "amir",
+      "date": "2026-07-18",
+      "time": "19:00",
+      "venue": "Cinema House, Malyan Hall"
+    },
+    {
+      "film": "mitrovica",
+      "date": "2026-07-18",
+      "time": "21:30",
+      "venue": "Cinema House, Malyan Hall"
+    },
+    {
+      "film": "errabonda",
+      "date": "2026-07-18",
+      "time": "21:30",
+      "venue": "Cinema House, Malyan Hall"
+    },
+    {
+      "film": "eva",
+      "date": "2026-07-18",
+      "time": "21:30",
+      "venue": "Cinema House, Malyan Hall"
+    },
+    {
+      "film": "coldcall",
+      "date": "2026-07-18",
+      "time": "21:30",
+      "venue": "Cinema House, Malyan Hall"
+    },
+    {
+      "film": "london",
+      "date": "2026-07-18",
+      "time": "18:00",
+      "venue": "Nairi Cinema"
+    },
+    {
+      "film": "satantango",
+      "date": "2026-07-18",
+      "time": "21:00",
+      "venue": "Nairi Cinema"
+    },
+    {
+      "film": "nogoodmen",
+      "date": "2026-07-18",
+      "time": "19:00",
+      "venue": "Moscow Cinema, Blue Hall"
+    },
+    {
+      "film": "sinners",
+      "date": "2026-07-18",
+      "time": "21:00",
+      "venue": "Moscow Cinema, Red Hall"
+    },
+    {
+      "film": null,
+      "date": "2026-07-20",
+      "time": "18:00",
+      "venue": "Cinema House, Grand Hall",
+      "title": "Winner Film",
+      "note": "Award-winning film (announced at closing)"
+    },
+    {
+      "film": null,
+      "date": "2026-07-20",
+      "time": "21:00",
+      "venue": "Cinema House, Grand Hall",
+      "title": "Winner Film",
+      "note": "Award-winning film (announced at closing)"
+    },
+    {
+      "film": null,
+      "date": "2026-07-20",
+      "time": "16:00",
+      "venue": "Cinema House, Malyan Hall",
+      "title": "Winner Film",
+      "note": "Award-winning film (announced at closing)"
+    },
+    {
+      "film": null,
+      "date": "2026-07-20",
+      "time": "18:00",
+      "venue": "Cinema House, Malyan Hall",
+      "title": "Winner Film",
+      "note": "Award-winning film (announced at closing)"
+    },
+    {
+      "film": null,
+      "date": "2026-07-20",
+      "time": "19:00",
+      "venue": "Cinema House, Malyan Hall",
+      "title": "Winner Film",
+      "note": "Award-winning film (announced at closing)"
+    },
+    {
+      "film": null,
+      "date": "2026-07-20",
+      "time": "21:00",
+      "venue": "Cinema House, Malyan Hall",
+      "title": "Winner Film",
+      "note": "Award-winning film (announced at closing)"
     }
   ]
 }
